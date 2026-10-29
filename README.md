@@ -1,5 +1,7 @@
 # hide-face
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Маскирует лицо на веб-камере и отдаёт готовую картинку в виртуальную камеру,
 чтобы её можно было выбрать в Zoom, Discord, OBS или Google Meet.
 
