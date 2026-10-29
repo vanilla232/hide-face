@@ -2,21 +2,20 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Маскирует лицо на веб-камере и отдаёт готовую картинку в виртуальную камеру,
-чтобы её можно было выбрать в Zoom, Discord, OBS или Google Meet.
+Инструмент для защиты приватности на веб-камере. Маскирует лицо и отдаёт результат в виртуальную камеру, которую можно использовать в стриминговых приложениях или программах для видеосвязи.
 
 Пока лицо в кадре — оно прячется одним из двух эффектов: чёрным прямоугольником
-или breakcore-глитчем. Режимы переключаются, когда закрываешь оба глаза на три
-секунды. Никаких кнопок нажимать не надо, ничего не сбивается во время игры.
+или breakcore-глитчем. Режимы переключаются жестом (закрытие глаз на три
+секунды), что удобно для стримеров и не отвлекает от основного контента.
 
 ## Что умеет
 
 - Находит лицо через MediaPipe FaceLandmarker (новый Tasks API).
 - Два режима маскировки:
-  - black — чёрный прямоугольник поверх лица.
-  - breakcore — пикселизация + сдвиги полос + RGB-разъезд + скан-линии + случайный текст.
-- Переключение режимов жестом: закрыть оба глаза на 3 секунды.
-- Отдаёт видео в виртуальную камеру — выбираешь её в любой программе и всё.
+  - black — чёрный прямоугольник поверх лица для полной анонимности.
+  - breakcore — пикселизация + сдвиги полос + RGB-разъезд + скан-линии + случайный текст (арт-эффект).
+- Управление жестами для удобства во время стримов (без использования клавиатуры).
+- Отдаёт видео в виртуальную камеру — выбираешь её в OBS или приложениях для видеосвязи.
 
 ## Что нужно
 
@@ -48,13 +47,13 @@ pyvirtualcam — это только мост. Чтобы виртуальная
 3. Нажми Start Virtual Camera, потом сразу Stop Virtual Camera.
 4. Закрой OBS — он больше не нужен, драйвер уже в системе.
 
-После этого в Zoom / Discord / Meet появится камера OBS Virtual Camera.
+После этого в приложениях появится камера OBS Virtual Camera.
 
 ## Как пользоваться
 
 1. Запусти hide-face.py (или run.bat).
 2. Откроется окно с превью — там ты видишь себя уже с маской.
-3. Открой Zoom / Discord / OBS, в настройках видео выбери OBS Virtual Camera.
+3. В приложении для стрима или видеосвязи выбери OBS Virtual Camera.
 4. Чтобы выйти — нажми q в окне превью.
 
 Переключение режимов: закрой оба глаза и держи их закрытыми 3 секунды.
@@ -95,21 +94,21 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 # hide-face
 
-Masks your face on the webcam and feeds the result into a virtual camera,
-so you can pick it in Zoom, Discord, OBS, or Google Meet.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A privacy protection tool for your webcam. It masks your face and feeds the result into a virtual camera, which can be used in streaming apps or video conferencing software.
 
 While your face is in the frame, it gets hidden by one of two effects:
-a solid black rectangle or a breakcore glitch. Switch between them by keeping
-both eyes closed for three seconds. No keyboard, no conflicts with games.
+a solid black rectangle or a breakcore glitch. Switch between them using a hands-free gesture (keeping both eyes closed for three seconds), which is convenient for streamers and doesn't distract from the content.
 
 ## Features
 
 - Face detection via MediaPipe FaceLandmarker (new Tasks API).
 - Two masking modes:
-  - black — solid black rectangle over the face.
-  - breakcore — pixelation + slice shifts + RGB split + scanlines + random text.
-- Gesture-based switching: hold both eyes closed for 3 seconds.
-- Output goes to a virtual camera — select it in any app and you're done.
+  - black — solid black rectangle over the face for full anonymity.
+  - breakcore — pixelation + slice shifts + RGB split + scanlines + random text (artistic effect).
+- Hands-free gesture control for convenience during streaming.
+- Output goes to a virtual camera — select it in OBS or any video calling app.
 
 ## Requirements
 
@@ -140,13 +139,13 @@ pyvirtualcam is only a bridge. You need the driver installed once:
 3. Click Start Virtual Camera, then Stop Virtual Camera.
 4. Close OBS. The driver is now on your system.
 
-After this, OBS Virtual Camera will appear in Zoom / Discord / Meet.
+After this, OBS Virtual Camera will appear in video apps.
 
 ## Usage
 
 1. Run hide-face.py (or run.bat).
 2. A preview window opens — you'll see yourself already masked.
-3. In your video app, select OBS Virtual Camera.
+3. In your streaming or video app, select OBS Virtual Camera.
 4. Press q in the preview window to quit.
 
 Switching modes: keep both eyes closed for 3 seconds. A regular blink
